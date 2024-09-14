@@ -1,19 +1,19 @@
-import { useEffect, useRef } from "react";
-import "./app.css";
+import {useEffect, useRef} from 'react';
+import './app.css';
 
-interface Props {
+interface BlurImgProps {
   img: string;
   imgSm: string;
   alt: string;
 }
 
-function App({ img, imgSm, alt }: Props) {
+function App({img, imgSm, alt}: BlurImgProps) {
   const blurLoadDiv = useRef<HTMLDivElement>(null);
   const image = useRef<HTMLImageElement>(null);
 
   const loaded = (): void => {
     if (blurLoadDiv.current) {
-      blurLoadDiv.current.classList.add("loaded");
+      blurLoadDiv.current.classList.add('loaded');
     }
   };
 
@@ -22,23 +22,23 @@ function App({ img, imgSm, alt }: Props) {
       if (image.current.complete) {
         loaded();
       } else {
-        image.current.addEventListener("load", loaded);
+        image.current.addEventListener('load', loaded);
       }
     }
   }, []);
 
   return (
     <div
-      className="blur-load-container"
+      className='blur-load-container'
       ref={blurLoadDiv}
-      style={{ backgroundImage: `url(${imgSm})` }}
+      style={{backgroundImage: `url(${imgSm})`}}
     >
       <img
-        className="blur-load-img"
+        className='blur-load-img'
         src={img}
         alt={alt}
         ref={image}
-        loading="lazy"
+        loading='lazy'
       />
     </div>
   );
