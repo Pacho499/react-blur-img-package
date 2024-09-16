@@ -1,6 +1,5 @@
-<<<<<<< HEAD:src/App.tsx
 import { useEffect, useRef, useState } from "react";
-import "./app.css";
+import "./BlurImg.css";
 
 export interface SpinnerProps {
   width: React.CSSProperties["width"];
@@ -12,22 +11,15 @@ export interface SpinnerProps {
 }
 
 interface Props {
-=======
-import {useEffect, useRef} from 'react';
-import './app.css';
-
-interface BlurImgProps {
->>>>>>> 702be3385e28ea1f440e74759ff6962490d4b28c:src/BlurImg.tsx
   img: string;
   placeHolder: string;
   alt: string;
-  aspectRatio?: string;
+  aspectRatio?: React.CSSProperties["aspectRatio"];
   objectFit?: React.CSSProperties["objectFit"];
   objectPosition?: React.CSSProperties["objectPosition"];
   spinner?: SpinnerProps;
 }
 
-<<<<<<< HEAD:src/App.tsx
 function BlurImg({
   img,
   placeHolder,
@@ -37,21 +29,14 @@ function BlurImg({
   objectPosition,
   spinner,
 }: Props) {
-=======
-function App({img, imgSm, alt}: BlurImgProps) {
->>>>>>> 702be3385e28ea1f440e74759ff6962490d4b28c:src/BlurImg.tsx
   const blurLoadDiv = useRef<HTMLDivElement>(null);
   const image = useRef<HTMLImageElement>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   const loaded = (): void => {
     if (blurLoadDiv.current) {
-<<<<<<< HEAD:src/App.tsx
       setLoading(false);
       blurLoadDiv.current.classList.add("loaded");
-=======
-      blurLoadDiv.current.classList.add('loaded');
->>>>>>> 702be3385e28ea1f440e74759ff6962490d4b28c:src/BlurImg.tsx
     }
   };
 
@@ -60,16 +45,15 @@ function App({img, imgSm, alt}: BlurImgProps) {
       if (image.current.complete) {
         loaded();
       } else {
-        image.current.addEventListener('load', loaded);
+        image.current.addEventListener("load", loaded);
       }
     }
   }, []);
 
   return (
     <div
-      className='blur-load-container'
+      className="blur-load-container"
       ref={blurLoadDiv}
-<<<<<<< HEAD:src/App.tsx
       style={
         {
           backgroundImage: `url(${placeHolder})`,
@@ -80,17 +64,14 @@ function App({img, imgSm, alt}: BlurImgProps) {
           "--border-style": spinner?.style,
         } as React.CSSProperties
       }
-=======
-      style={{backgroundImage: `url(${imgSm})`}}
->>>>>>> 702be3385e28ea1f440e74759ff6962490d4b28c:src/BlurImg.tsx
     >
       {loading && <div className="spinner" style={spinner}></div>}
       <img
-        className='blur-load-img'
+        className="blur-load-img"
         src={img}
         alt={alt}
         ref={image}
-        loading='lazy'
+        loading="lazy"
       />
     </div>
   );
