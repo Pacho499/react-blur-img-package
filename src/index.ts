@@ -1,2 +1,2 @@
-import blurImg from './BlurImg';
-export default blurImg;
+import { BlurImg } from "./BlurImg";
+export default BlurImg;
