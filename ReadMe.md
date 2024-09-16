@@ -111,3 +111,6 @@ function App() {
 ```
 
 ![Demo](/customSpinner.gif)
+
+## Tip for Improving Placeholder Loading
+To create a placeholder background similar to the original image, you can simply take the original image and resize it to a very small dimension, such as 20x20px or 30x30px. This way, the placeholder will visually resemble the final version, and its loading will be almost instantaneous due to the reduced size, providing a smoother user experience.
