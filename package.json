@@ -1,6 +1,10 @@
 {
   "name": "react-blur-img",
+<<<<<<< HEAD
   "version": "0.0.2",
+=======
+  "version": "0.0.3",
+>>>>>>> 702be3385e28ea1f440e74759ff6962490d4b28c
   "description": "Reausable blur-image component",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
