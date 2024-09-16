@@ -1,6 +1,6 @@
 {
   "name": "react-blur-img",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Reausable blur-image component",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c --bundleConfigAsCjs"
   },
-  "author": "",
+  "author": "Lorenzo Palumbo",
+  "repository": "https://github.com/Pacho499/react-blur-img-package",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
