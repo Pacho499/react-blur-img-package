@@ -1,2 +1,3 @@
-import { BlurImg } from "./BlurImg";
-export default BlurImg;
+import { BlurImg, SpinnerProps } from "./BlurImg";
+export { BlurImg };
+export type { SpinnerProps };

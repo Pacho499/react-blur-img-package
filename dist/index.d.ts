@@ -19,4 +19,4 @@ interface Props {
 }
 declare function BlurImg({ img, placeHolder, alt, aspectRatio, objectFit, objectPosition, spinner, }: Props): react_jsx_runtime.JSX.Element;
 
-export { BlurImg as default };
+export { BlurImg, type SpinnerProps };
