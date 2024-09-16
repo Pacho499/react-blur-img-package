@@ -8,7 +8,7 @@
 
 .blur-load-img {
   width: 100%;
-  aspect-ratio: var(--aspect-ratio, auto);
+  aspect-ratio: var(--aspect-ratio, 1/1);
   display: block;
   object-fit: var(--object-fit, cover);
   object-position: var(--object-position, center);
