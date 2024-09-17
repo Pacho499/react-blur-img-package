@@ -2,6 +2,8 @@
 
 The `BlurImg` component is a React component that provides a blurred placeholder image until the main image finishes loading. It also supports an optional loading spinner for a better user experience.
 
+Try the [Demo](https://react-blur-img-pacho499s-projects.vercel.app/)
+
 ![Demo](/Classic.gif)
 
 ## Features
@@ -63,14 +65,14 @@ function App() {
 
 ### `Spinner Props` structure
 
-| Prop      | Type                                 | Default            | Description                                              |
-| :-------- | :----------------------------------- | :----------------- | :------------------------------------------------------- |
-| width     | `React.CSSProperties["width"]`       | `40px`             | Controls the width of the spinner.                       |
-| height    | `React.CSSProperties["height"]`      | `40px`             | Controls the height of the spinner.                      |
-| border    | `React.CSSProperties["border"]`      | `4px dotted black` | Controls the thickness, style and color for the spinner. |
-| borderTop | `React.CSSProperties["borderTop"]`   | `none`             | Controls Top border to create another rotating effect.   |
-| color     | `React.CSSProperties["borderColor"]` | `black`            | Controls the color for the spinner.                      |
-| style     | `React.CSSProperties["borderStyle"]` | `dotted`           | Controls the style for the spinner.                      |
+| Prop        | Type                                 | Default  | Description                                            |
+| :---------- | :----------------------------------- | :------- | :----------------------------------------------------- |
+| width       | `React.CSSProperties["width"]`       | `40px`   | Controls the width for the spinner.                    |
+| height      | `React.CSSProperties["height"]`      | `40px`   | Controls the height for the spinner.                   |
+| borderWidth | `React.CSSProperties["borderWidth"]` | `4px`    | Controls the thicknes for the spinner.                 |
+| color       | `React.CSSProperties["borderColor"]` | `black`  | Controls the color for the spinner.                    |
+| style       | `React.CSSProperties["borderStyle"]` | `dotted` | Controls the style for the spinner.                    |
+| borderTop   | `React.CSSProperties["borderTop"]`   | `none`   | Controls Top border to create another rotating effect. |
 
 ## `CSS classes`
 
@@ -79,7 +81,7 @@ function App() {
 | blur-load-container | The main wrapper for the image and the loading placeholder.                                                    |
 | blur-load-img       | Handle img style                                                                                               |
 | loaded              | Added to the container once the image has fully loaded, removing the placeholder and making the image visible. |
-| spinner             | Defines the spinner's appearance and animation.                                                                |
+| blur-load-spinner   | Defines the spinner's appearance and animation.                                                                |
 
 ## Custom Spinner usage
 
@@ -113,4 +115,5 @@ function App() {
 ![Demo](/customSpinner.gif)
 
 ## Tip for Improving Placeholder Loading
+
 To create a placeholder background similar to the original image, you can simply take the original image and resize it to a very small dimension, such as 20x20px or 30x30px. This way, the placeholder will visually resemble the final version, and its loading will be almost instantaneous due to the reduced size, providing a smoother user experience.

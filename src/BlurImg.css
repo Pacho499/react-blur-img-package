@@ -36,7 +36,7 @@
   opacity: 1;
 }
 
-.spinner {
+.blur-load-spinner {
   left: 0;
   right: 0;
   top: 0;
@@ -46,7 +46,9 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: 4px var(--border-style, dotted) var(--border-color, black);
+  border-width: var(--border-width, 4px);
+  border-style: var(--border-style, dotted);
+  border-color: var(--border-color, black);
   animation: loading 3s linear infinite;
 }
 

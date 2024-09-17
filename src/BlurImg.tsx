@@ -4,17 +4,17 @@ import "./BlurImg.css";
 export interface SpinnerProps {
   width: React.CSSProperties["width"];
   height: React.CSSProperties["height"];
-  border?: React.CSSProperties["border"];
-  borderTop?: React.CSSProperties["borderTop"];
+  borderWidth?: React.CSSProperties["borderWidth"];
   color?: React.CSSProperties["borderColor"];
   style?: React.CSSProperties["borderStyle"];
+  borderTop?: React.CSSProperties["borderTop"];
 }
 
 interface Props {
   img: string;
   placeHolder: string;
   alt: string;
-  aspectRatio?: React.CSSProperties["aspectRatio"];
+  aspectRatio?: string;
   objectFit?: React.CSSProperties["objectFit"];
   objectPosition?: React.CSSProperties["objectPosition"];
   spinner?: SpinnerProps;
@@ -62,10 +62,11 @@ function BlurImg({
           "--object-position": objectPosition,
           "--border-color": spinner?.color,
           "--border-style": spinner?.style,
+          "--border-width": spinner?.borderWidth,
         } as React.CSSProperties
       }
     >
-      {loading && <div className="spinner" style={spinner}></div>}
+      {loading && <div className="blur-load-spinner" style={spinner}></div>}
       <img
         className="blur-load-img"
         src={img}

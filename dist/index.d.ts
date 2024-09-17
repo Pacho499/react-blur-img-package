@@ -3,16 +3,16 @@ import * as react_jsx_runtime from 'react/jsx-runtime';
 interface SpinnerProps {
     width: React.CSSProperties["width"];
     height: React.CSSProperties["height"];
-    border?: React.CSSProperties["border"];
-    borderTop?: React.CSSProperties["borderTop"];
+    borderWidth?: React.CSSProperties["borderWidth"];
     color?: React.CSSProperties["borderColor"];
     style?: React.CSSProperties["borderStyle"];
+    borderTop?: React.CSSProperties["borderTop"];
 }
 interface Props {
     img: string;
     placeHolder: string;
     alt: string;
-    aspectRatio?: React.CSSProperties["aspectRatio"];
+    aspectRatio?: string;
     objectFit?: React.CSSProperties["objectFit"];
     objectPosition?: React.CSSProperties["objectPosition"];
     spinner?: SpinnerProps;
