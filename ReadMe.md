@@ -15,20 +15,19 @@ Try the [Demo](https://react-blur-img-pacho499s-projects.vercel.app/)
 
 ## Installation
 
-1. Clone or download the component files.
-2. Make sure you have React installed in your project:
+1. Download the package via NPM.
 
 ```bash
 npm i react-blur-img
 ```
 
-3. Import the component in your project
+2. Import the component in your project
 
 ```javascript
 import { BlurImg } from "react-blur-img";
 ```
 
-4. Usage
+3. Usage
 
 ```javascript
 import { BlurImg } from "react-blur-img";
